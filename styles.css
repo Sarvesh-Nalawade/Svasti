@@ -328,12 +328,26 @@ header {
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   
+  /* BBS: GPT */
   min-height: 20rem;
   display: flex;
   flex-direction: column;
 }
 
+/* GPT image-container and trip_card img*/
+.image-container {
+  flex: 1 0 80%; /* 80% of the container's height */
+  background-color: white; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.trip__card img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 .trip__details {
   padding: 1rem;
