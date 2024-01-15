@@ -25,6 +25,8 @@
 .section__header {
   display: flex;
   align-items: center;
+  /* This 'space-between' causes the image near about us to go on right most and flow off*/
+  /* If want to fix that, dont mess with this one, create id to add specific changes to that one div*/
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -36,12 +38,26 @@
   font-weight: 600;
   color: var(--text-dark);
   margin-bottom: 1rem;
+
+  /* BBS : Copying the div of brands sectoin: */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .section__subtitle {
+  /* BBS: this text-align is added new */
+  text-align: justify;
   font-size: 1rem;
   color: var(--text-dark);
   max-width: calc(var(--max-width) / 2);
+
+  /* BBS : Copying the div of brands sectoin: */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
@@ -160,7 +176,7 @@ header {
   gap: 1rem;
 }
 
-.header__content .sub__header {
+.header_content .sub_header {
   font-size: 1rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -173,7 +189,7 @@ header {
   color: var(--text-dark);
 }
 
-.header__content .action__btns {
+.header_content .action_btns {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -294,7 +310,7 @@ header {
   background-color: var(--secondary-color);
 }
 
-.trip__container :is(.section__title, .section__subtitle, .view__all) {
+.trip_container :is(.sectiontitle, .sectionsubtitle, .view_all) {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
@@ -311,7 +327,13 @@ header {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .trip__details {
   padding: 1rem;
@@ -322,6 +344,9 @@ header {
   color: var(--text-dark);
   background-color: var(--extra-light);
   cursor: pointer;
+  
+  /* GPT */
+  flex: 0 1 20%; 
 }
 
 .rating {
@@ -390,7 +415,7 @@ header {
   max-width: 400px;
 }
 
-.gallary__content .section__subtitle {
+.gallary_content .section_subtitle {
   margin-bottom: 2rem;
 }
 
@@ -529,6 +554,7 @@ header {
   }
 
   .footer__container {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
