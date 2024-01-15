@@ -25,8 +25,6 @@
 .section__header {
   display: flex;
   align-items: center;
-  /* This 'space-between' causes the image near about us to go on right most and flow off*/
-  /* If want to fix that, dont mess with this one, create id to add specific changes to that one div*/
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -328,16 +326,16 @@ header {
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   
-  /* BBS: GPT */
+  /* BBS */
   min-height: 20rem;
   display: flex;
   flex-direction: column;
 }
 
-/* GPT image-container and trip_card img*/
+/* BBS image-container and trip_card img*/
 .image-container {
-  flex: 1 0 80%; /* 80% of the container's height */
-  background-color: white; /* White background */
+  flex: 1 0 80%;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,7 +357,7 @@ header {
   background-color: var(--extra-light);
   cursor: pointer;
   
-  /* GPT */
+  /* BBS */
   flex: 0 1 20%; 
 }
 
