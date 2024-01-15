@@ -25,6 +25,8 @@
 .section__header {
   display: flex;
   align-items: center;
+  /* This 'space-between' causes the image near about us to go on right most and flow off*/
+  /* If want to fix that, dont mess with this one, create id to add specific changes to that one div*/
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -56,6 +58,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* BBS: */
+.section__subtitle__full {
+  text-align: justify;
+  font-size: 1rem;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .btn {
@@ -304,50 +318,50 @@ header {
   font-weight: 600;
 }
 
-.trip {
+.prod {
   background-color: var(--secondary-color);
 }
 
-.trip_container :is(.sectiontitle, .sectionsubtitle, .view_all) {
+.prod_container :is(.sectiontitle, .sectionsubtitle, .view_all) {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
 }
 
-.trip__grid {
+.prod__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 4rem 0;
 }
 
-.trip__card {
+.prod__card {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
   
-  /* BBS */
+  /* BBS: */
   min-height: 20rem;
   display: flex;
   flex-direction: column;
 }
 
-/* BBS image-container and trip_card img*/
+/* BBS image-container and prod_card img*/
 .image-container {
-  flex: 1 0 80%;
-  background-color: white;
+  flex: 1 0 70%; /* 80% of the container's height */
+  background-color: white; /* White background */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.trip__card img{
+.prod__card img{
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.trip__details {
+.prod__details {
   padding: 1rem;
   display: grid;
   gap: 0.5rem;
@@ -358,7 +372,7 @@ header {
   cursor: pointer;
   
   /* BBS */
-  flex: 0 1 20%; 
+  flex: 0 1 30%; 
 }
 
 .rating {
@@ -377,7 +391,7 @@ header {
   color: var(--text-light);
 }
 
-.book__now {
+.order_now {
   padding: 0.5rem 1.5rem;
   color: var(--primary-color);
   outline: none;
@@ -388,7 +402,7 @@ header {
   transition: 0.3s;
 }
 
-.book__now:hover {
+.order_now:hover {
   color: var(--extra-light);
   background-color: var(--primary-color);
 }
@@ -517,6 +531,11 @@ header {
   border-top: 1px solid var(--text-light);
 }
 
+/* BBS */
+.gallary {
+  background-color: var(--secondary-color);
+}
+
 @media (width < 1200px) {
   .header__image img:nth-child(1) {
     max-width: 300px;
@@ -543,7 +562,7 @@ header {
     gap: 1rem;
   }
 
-  .trip__grid {
+  .prod__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -553,7 +572,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .trip__grid {
+  .prod__grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
