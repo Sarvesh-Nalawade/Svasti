@@ -393,7 +393,7 @@ background-color: var(--primary-color);
   font-weight: 600;
 }
 
-.prod {
+.brands {
   background-color: var(--secondary-color);
 }
 
@@ -642,6 +642,27 @@ background-color: var(--primary-color);
 .gallary {
   background-color: var(--secondary-color);
 }
+
+.footer__col h4{
+  display: inline-flex; /* Aligns the text and icon inline */
+  align-items: center;  /* Vertically centers the icon with the text */
+}
+
+.footer__col h5{
+  display: inline-flex; /* Aligns the text and icon inline */
+  align-items: center;  /* Vertically centers the icon with the text */
+}
+
+.footer__col .icos {
+  margin-right: 8px; /* Adjust space between text and icon */
+  /* Additional styling for icon size, if needed */
+}
+
+.footer__col .icos img {
+  width: 1.25rem; 
+  height: auto;
+}
+/* /BBS */
 
 
 @media (width < 1200px) {
