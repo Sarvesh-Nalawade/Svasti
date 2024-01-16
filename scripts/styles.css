@@ -16,6 +16,61 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  cursor: pointer;
+  word-spacing: 1rem;
+}
+
+.nav__logo span {
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0 1rem;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -27,7 +82,7 @@
   align-items: center;
   /* This 'space-between' causes the image near about us to go on right most and flow off*/
   /* If want to fix that, dont mess with this one, create id to add specific changes to that one div*/
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 4rem;
@@ -88,59 +143,6 @@
   background-color: var(--primary-color-dark);
 }
 
-a {
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-nav {
-  padding: 1rem;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: var(--max-width);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav__logo {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  cursor: pointer;
-}
-
-.nav__logo span {
-  color: var(--primary-color);
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.link a {
-  padding: 0 1rem;
-  color: var(--text-dark);
-  transition: 0.3s;
-}
-
-.link a:hover {
-  color: var(--primary-color);
-}
 
 header {
   background-color: var(--secondary-color);
@@ -354,7 +356,8 @@ background-color: var(--primary-color);
   /* Change to a line for the active dot */
   content: '•' !important;
   font-size: 3rem !important; /* Increase font size */
-  color: #000 !important;
+  /* color: #000 !important; */
+  color: black !important;
   /* color: white !important; */
   
 }
@@ -502,11 +505,43 @@ background-color: var(--primary-color);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* BBS */
+.img__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: calc(var(--max-width) / 2);
+  margin-top: 5rem;
+}
+
+.gallery_container{
+  /* width: calc(var(--max-width) / 2.5); */
+  display: flex;
+  flex: 1;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__col {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+
+
+.gallery__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  max-width: calc((var(--max-width) / 2.5)) ;
+  /* max-width: 90% ; */
+  display: block;
+}
+/* /BBS */
+
 .gallary__content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .gallary__content > div {
