@@ -662,8 +662,18 @@ background-color: var(--primary-color);
   width: 1.25rem; 
   height: auto;
 }
-/* /BBS */
 
+.gmaps h4{
+  margin-bottom: 1rem;
+}
+
+.gmaps iframe{
+  border:1; 
+  border-radius: 5px;
+  margin-top: 0px;
+  height: 10rem;
+}
+/* /BBS */
 
 @media (width < 1200px) {
   .header__image img:nth-child(1) {
