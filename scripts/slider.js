@@ -5,7 +5,7 @@ $(document).ready(function(){
         speed: 300,
         slidesToShow: 3, // Adjust based on how many logos you want to show at once
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
 
@@ -44,4 +44,5 @@ $(document).ready(function(){
     //     // ... other settings ...
 
     // });
-    
+
+
