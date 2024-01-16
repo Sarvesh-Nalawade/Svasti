@@ -39,7 +39,7 @@
   color: var(--text-dark);
   margin-bottom: 1rem;
 
-  /* BBS : Copying the div of brands sectoin: */
+  /* BBS : Copying the div of brands section: */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,6 +248,34 @@ header {
   color: var(--text-dark);
 }
 
+.destination__nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  /* gap: 1rem; */
+}
+
+.destination__nav span {
+width: 30px;
+height: 30px;
+display: grid;
+place-content: center;
+color: var(--primary-color);
+border: 1px solid var(--primary-color);
+border-radius: 100%;
+font-size: 1.5rem;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.destination__nav span:hover {
+color: var(--extra-light);
+background-color: var(--primary-color);
+}
+
 .destination__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -264,6 +292,22 @@ header {
 
 .destination__card img {
   border-radius: 1rem;
+}
+
+.destination__details {
+  position: absolute;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--extra-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 1;
+  transition: 0.3s;
 }
 
 .destination__card:hover .destination__details {
@@ -285,13 +329,12 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-
 }
 
 .destination__card__edited img {
-  max-height: 100%;
-  border-radius: 1rem;
-  max-width: 100%;
+  max-height: 90%;
+  border-radius: 0.5rem;
+  max-width: 90%;
   object-fit: contain;
   margin: auto;
 }
@@ -320,35 +363,6 @@ header {
     position: relative;
 }
 
-.destination__nav span {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-content: center;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 100%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.destination__nav span:hover {
-  color: var(--extra-light);
-  background-color: var(--primary-color);
-}
-
-
-.destination__nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-100%);
-    /* gap: 1rem; */
-}
-
 .nav-arrow {
     cursor: pointer;
     /* Additional styling for arrows */
@@ -356,28 +370,15 @@ header {
 
 .nav-arrow.left {
     margin-left: 5px; /* Adjust as needed */
+    max-width:  1.5rem;
+    max-height: 1.5rem;
 }
 
 .nav-arrow.right {
     margin-right: 5cqmin; /* Adjust as needed */
+    max-width:  1.5rem;
+    max-height: 1.5rem;
 }
-
-.destination__details {
-  position: absolute;
-  width: calc(100% - 2rem);
-  padding: 1rem;
-  bottom: -6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: var(--extra-light);
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
-  z-index: 1;
-  transition: 0.3s;
-}
-
 
 .destination__title {
   font-size: 0.9rem;
@@ -442,8 +443,8 @@ header {
   background-color: var(--extra-light);
   cursor: pointer;
   
-  /* BBS */
-  flex: 0 1 30%; 
+  /* BBS: dont enable this, causes bariable sized order buttons */
+  /* flex: 0 1 30%;  */
 }
 
 .rating {
