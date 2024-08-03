@@ -4,7 +4,7 @@
   --primary-color: #3685fb;
   --primary-color-dark: #2f73d9;
   --secondary-color: #fafcff;
-  --text-dark: #0d213f;
+  --text-dark: #373636;
   --text-light: #767268;
   --extra-light: #ffffff;
   --max-width: 1200px;
@@ -727,4 +727,17 @@ background-color: var(--primary-color);
     /* grid-template-columns: repeat(1, 1fr); */
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+a {
+  color: rgb(255, 255, 255); /* Change the link color to blue */
+}
+a:visited {
+  color: purple; /* Change the color of visited links to purple */
+}
+a:hover {
+  color: rgb(22, 17, 192); /* Change the color when the link is hovered over to green */
+}
+a:active {
+  color: red; /* Change the color when the link is clicked to red */
 }
