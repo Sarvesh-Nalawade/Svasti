@@ -43,7 +43,7 @@ nav {
 }
 
 .nav__logo {
-  font-size: 3rem;
+  font-size: 70px;
   font-weight: 800;
   color: var(--text-dark);
   cursor: pointer;
@@ -743,6 +743,7 @@ a:active {
 }
 
 /* Default styles for larger screens */
+/* Default styles for larger screens */
 #logo-img {
     width: 170px;
     height: 170px;
@@ -751,13 +752,14 @@ a:active {
 /* Media query for screens 445px wide or less */
 @media (max-width: 445px) {
     #logo-img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     /* Optionally, reduce font size for the logo text */
     .nav__logo {
-        font-size: 18px;
+        font-size: 41px;
     }
 }
+
 
