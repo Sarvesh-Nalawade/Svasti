@@ -741,3 +741,23 @@ a:hover {
 a:active {
   color: red; /* Change the color when the link is clicked to red */
 }
+
+/* Default styles for larger screens */
+#logo-img {
+    width: 170px;
+    height: 170px;
+}
+
+/* Media query for screens 445px wide or less */
+@media (max-width: 445px) {
+    #logo-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Optionally, reduce font size for the logo text */
+    .nav__logo {
+        font-size: 18px;
+    }
+}
+
